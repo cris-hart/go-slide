@@ -1,0 +1,25 @@
+GO
+The new kid of the block
+31 Jul 2015
+
+
+Cristian Pavan
+Developer, H-art
+cpavan@h-art.com
+ 
+* What's go ?
+
+Go is a _statically-typed_ program language with syntax loosely derived from that of C that include:
+
+- garbage collection
+- type safety
+- dynamic-typing capabilities
+- additional built-in types (compared to C)
+- large standard library
+
+**
+**
+
+*Why* *it* *was* *made?*
+
+The Go programming language is an open source project to make programmers more productive. 
