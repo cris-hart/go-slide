@@ -7,19 +7,49 @@ import (
 	"bitbucket.org/tux-eithel/slides/human"
 )
 
+type ispeak interface {
+	MyNameIs() string
+	Speak() string
+}
+
 func main() {
 	dog := &animal.Animal{
 		"Fufy",
 	}
 	cris := &human.Human{
 		"Cris",
-		"ciao Fiori",
+		"ciao devs",
 	}
+	bird := &animal.Parrot{
+		animal.Animal{"Kirbi"},
+		"hi hi",
+	}
+
 	Print(dog)
 	Print(cris)
+	Print(bird)
+
+	PrintI(dog)
 }
 
 func Print(x interface{}) {
-	app := x.(*animal.Animal)
-	fmt.Println(app.MyNameIs())
+
+	switch t := x.(type) {
+	case *animal.Animal:
+		fmt.Println(t.MyNameIs())
+	case *human.Human:
+		fmt.Println(t.MyNameIs())
+		fmt.Println(t.Speak())
+	case *animal.Parrot:
+		fmt.Println(t.MyNameIs())
+		fmt.Println(t.Speak())
+	default:
+		fmt.Println("not supported")
+	}
+
+}
+
+func PrintI(t ispeak) {
+	fmt.Println(t.MyNameIs())
+	fmt.Println(t.Speak())
 }
