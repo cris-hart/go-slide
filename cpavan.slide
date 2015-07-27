@@ -117,9 +117,9 @@ Compile time error
 	./speak.go:32: cannot use dog (type *animal.Animal) as type ispeak in argument to PrintI:
 	*animal.Animal does not implement ispeak (missing Speak method)
 
-* Dependency Vendoring - dir struct
+* Dependency - dir struct
 
-	GOPATH=~/GO
+	$ export GOPATH=~/GO
 
 	.
 	├── bin
@@ -140,17 +140,43 @@ Compile time error
 		    └── x
 
 
-* Dependency Vendoring - imports
+* Dependency - imports
 
+	import (
+		"bufio"
+		"errors"
+		"fmt"
+		"path"
+		"path/filepath"
+		"reflect"
+		"runtime"
+		"strconv"
+		"strings"
+		
+		"database/sql"
+		_ "github.com/lib/pq"
+		
+		"github.com/gorilla/mux"
+	
+		beecontext "github.com/astaxie/beego/context"
+		"github.com/astaxie/beego/toolbox"
+		"github.com/astaxie/beego/utils"
+	)
 
+* Dependency - solutions
 
-* Dependency Vendoring - solutions
+**
+**
+
+- vendoring (likes [[https://github.com/tools/godep][godep]] and also proposed in go 1.5)
+- project-based workspaces (likes [[http://getgb.io/][gb]])
+- revision locking (likes [[https://github.com/mattn/gom][gom]])
 
 * Other criticisms
 
 - Too minimal
 - Already stable
-- Performance *GOMAXPROCS* and *GC*
+- Performance: *GOMAXPROCS* and *GC* (improved in go 1.5)
 
 * General Feeling
 
@@ -160,3 +186,109 @@ Compile time error
 
 .caption Go seems thinked from a group of people who always has worked with C ignoring the last 30 years of evolution of programming languages
 
+* Where GO rocks
+
+**
+**
+
+- learning curve
+- compile speed
+- scaling (built-in concurrency primitives)
+- re-distribute apps (Docker, VM)
+- promote the use of interfaces
+- tools for manipulate the code
+
+* Learning curve - 1
+
+Go has a small syntax to keep the code concise and readable
+example:
+	
+	// Like a C for
+	for init; condition; post { }
+
+		// Like a C while
+	for condition { }
+
+	// Like a C for(;;)
+	for { }
+	
+	for key,value := range mapValues{
+		
+	}
+
+
+Multiple return values:
+
+	func (file *File) Write(b []byte) (n int, err error)
+
+	num, err := f.Write([]byte{})
+	
+* Learning curve - 2
+
+Check if an element is present on a map
+
+	votes := map[string]int{
+		"mi": 6,
+		"lu": 7,
+		"laltro": 4,
+	}
+	
+	value, ok := votes["ti"]
+	
+Blank identifier
+
+	if _, ok := votes["ti"]; !ok {
+		fatal.Log("not found")
+	}
+	
+	// for pointers to struct
+	type MyType struct{}
+	var _ MyInterface = (*MyType)(nil)
+
+* Learning curve - 3
+
+Embedding
+
+	type Reader interface {
+	    Read(p []byte) (n int, err error)
+	}
+	
+	type Writer interface {
+	    Write(p []byte) (n int, err error)
+	}
+	
+	// ReadWriter is the interface that combines the Reader and Writer interfaces.
+	type ReadWriter interface {
+	    Reader
+	    Writer
+	}
+	
+* Learning curve - 4
+
+Defer
+	
+	f, err := os.Open(filename)
+    if err != nil {
+        return "", err
+    }
+    defer f.Close()  // f.Close will run when we're finished.
+	// rest of the code
+
+Documentation
+	
+	// funcName sees people and does stuff
+	func funcName(people []person) {
+		
+	}
+
+
+* Concurrency
+
+**
+**
+
+.caption Do not communicate by sharing memory; instead, share memory by communicating.
+
+* Goroutine
+
+* Channel
