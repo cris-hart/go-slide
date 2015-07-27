@@ -1,7 +1,7 @@
-package "human"
+package human
 
 type Human struct {
-	Name string
+	Name   string
 	Phrase string
 }
 
@@ -10,5 +10,5 @@ func (h *Human) MyNameIs() string {
 }
 
 func (h *Human) Speak() string {
-	return h.Pharese
+	return h.Phrase
 }
