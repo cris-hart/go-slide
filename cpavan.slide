@@ -47,6 +47,7 @@ What C does well ?
 What C doen't well ?
 - memory management
 - compile time and compile instruction
+- warm-up project slow
 
 * Compare to Python
 
@@ -77,14 +78,71 @@ Sadly GO does not support generics like other *strictly-typed* programming langu
 **
 
 	func append(slice []Type, elems ...Type) []Type
+	
+**
+**
+
+Use of 
+
+	interface{}
+to pass/receive arguments (it's like " _void_ _*_ " in C)
+
+* Lacks of Generics - types Animal
+
+.code animal/animal.go
+
+* Lacks of Generics - types Human
+
+.code human/human.go
 
 * Lacks of Generics - example
 
-.play speak.go
+.code speak.go /^func main/,/^}/
+
+* Lacks of Generics - example
+
+.code speak.go /^func Print/,/^}/
 
 * Lacks of Generics - use interface
 
+.code speak.go /^type ispeak/,/^}/
+
+.code speak.go /^func PrintI/,/^}/
+
+**
+**
+
+Compile time error
+
+	./speak.go:32: cannot use dog (type *animal.Animal) as type ispeak in argument to PrintI:
+	*animal.Animal does not implement ispeak (missing Speak method)
+
 * Dependency Vendoring - dir struct
+
+	GOPATH=~/GO
+
+	.
+	├── bin
+	├── pkg
+	│   └── linux_amd64
+	│       ├── bitbucket.org
+	│       ├── github.com
+	│       └── golang.org
+	└── src
+	    ├── bitbucket.org
+	    │   └── tux-eithel
+	    ├── github.com
+	    │   ├── golang
+	    │   ├── heroku
+	    │   ├── tools
+	    │   └── tux-eithel
+	    └── golang.org
+		    └── x
+
+
+* Dependency Vendoring - imports
+
+
 
 * Dependency Vendoring - solutions
 
@@ -92,7 +150,7 @@ Sadly GO does not support generics like other *strictly-typed* programming langu
 
 - Too minimal
 - Already stable
-- Performance *GOMAXPROC* and *GC*
+- Performance *GOMAXPROCS* and *GC*
 
 * General Feeling
 
