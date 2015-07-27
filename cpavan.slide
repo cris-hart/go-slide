@@ -23,3 +23,82 @@ Go is a _statically-typed_ program language with syntax loosely derived from tha
 *Why* *it* *was* *made?*
 
 The Go programming language is an open source project to make programmers more productive. 
+
+* Is it perfect? 
+
+*NO*
+
+**
+
+.caption GO is halfway through C and Python but it's not better of neither of the two
+
+* Compare to C
+
+**
+**
+
+What C does well ?
+- memory management
+- total control of what's is going on
+
+**
+**
+
+What C doen't well ?
+- memory management
+- compile time and compile instruction
+
+* Compare to Python
+
+**
+**
+
+What Python does well ?
+- great built-in types
+- simple (few lines of code)
+- force you to write "good" code
+
+**
+**
+
+What Python doesn't well ?
+- Slow 
+- Need a interpreter
+- Packagin and ship
+
+* Lacks of Generics
+
+**
+**
+
+Sadly GO does not support generics like other *strictly-typed* programming language (Java, C#, C++)
+
+**
+**
+
+	func append(slice []Type, elems ...Type) []Type
+
+* Lacks of Generics - example
+
+.play speak.go
+
+* Lacks of Generics - use interface
+
+* Dependency Vendoring - dir struct
+
+* Dependency Vendoring - solutions
+
+* Other criticisms
+
+- Too minimal
+- Already stable
+- Performance *GOMAXPROC* and *GC*
+
+* General Feeling
+
+**
+**
+**
+
+.caption Go seems thinked from a group of people who always has worked with C ignoring the last 30 years of evolution of programming languages
+
