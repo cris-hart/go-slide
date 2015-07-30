@@ -195,7 +195,6 @@ Compile time error
 - compile speed
 - scaling (built-in concurrency primitives)
 - re-distribute apps (Docker, VM)
-- promote the use of interfaces
 - tools for manipulate the code
 
 * Learning curve - 1
@@ -306,3 +305,38 @@ A goroutine has a simple model: it is a function executing concurrently with oth
 * Channel with Select
 
 .play select.go
+
+* Go on Web
+
+Example of a web application
+
+.play server.go
+
+* Tools
+
+Several tools for manipulate source code
+
+- gofmt
+- go vet
+- go doc
+- golint
+- goimports
+- oracle
+
+* What's go place ?
+
+Go, has been announced as a system language (used in server side).
+
+**
+**
+
+Its scope right now is between microservices environment and useful command line utilities.
+
+**
+**
+
+It's going to be used to replace the slowest parts of monolithic applications (without the use of C), and in the future will be simpler (shared libraries)
+
+* Resources
+
+Useful link and books
