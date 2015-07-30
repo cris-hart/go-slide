@@ -322,6 +322,7 @@ Several tools for manipulate source code
 - golint
 - goimports
 - oracle
+- callgraph
 
 * What's go place ?
 
@@ -339,4 +340,18 @@ It's going to be used to replace the slowest parts of monolithic applications (w
 
 * Resources
 
-Useful link and books
+.link https://golang.org/doc/ Go Doc
+
+.link https://tour.golang.org/ Go Tour
+
+.link https://golang.org/doc/effective_go.html Effective Go
+
+.link http://devs.cloudimmunity.com/gotchas-and-common-mistakes-in-go-golang/index.html 50 Shades of Go
+
+.link http://slides.com/kevrone/what-could-go-wrong?token=HZlPo4g-#/ What Could Go Wrong?
+
+.link https://github.com/golang/go/wiki/LearnConcurrency Learn Concurrency
+
+.link https://talks.golang.org/ Slide Talks
+
+.link https://blog.golang.org/ Go Blog
