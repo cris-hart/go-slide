@@ -1,5 +1,5 @@
 GO
-The new kid of the block
+The new kid on the block
 31 Jul 2015
 
 
@@ -9,7 +9,7 @@ cpavan@h-art.com
  
 * What's go ?
 
-Go is a _statically-typed_ program language with syntax loosely derived from that of C that include:
+Go is a _statically-typed_ language program with syntax loosely derived from that of C that include:
 
 - garbage collection
 - type safety
@@ -20,7 +20,7 @@ Go is a _statically-typed_ program language with syntax loosely derived from tha
 **
 **
 
-*Why* *it* *was* *made?*
+*Why* *was* *it* *made?*
 
 The Go programming language is an open source project to make programmers more productive. 
 
@@ -37,14 +37,14 @@ The Go programming language is an open source project to make programmers more p
 **
 **
 
-What C does well ?
+What does C do well ?
 - memory management
-- total control of what's is going on
+- total control of what's going on
 
 **
 **
 
-What C doesn't well ?
+What doesn't C do well ?
 - memory management
 - compile time and compile instruction
 - warm-up project slow
@@ -54,7 +54,7 @@ What C doesn't well ?
 **
 **
 
-What Python does well ?
+What does Python do well ?
 - great built-in types
 - simple (few lines of code)
 - force you to write "good" code
@@ -62,7 +62,7 @@ What Python does well ?
 **
 **
 
-What Python doesn't well ?
+What doesn't Python do well ?
 - Slow 
 - Need a interpreter
 - Packagin and ship
@@ -91,7 +91,7 @@ to pass/receive arguments (it's like " _void_ _*_ " in C)
 
 .code animal/animal.go
 
-* Lacks of Generics - types Human
+* Lack of Generics - types Human
 
 .code human/human.go
 
@@ -172,7 +172,7 @@ Compile time error
 - project-based workspaces (likes [[http://getgb.io/][gb]])
 - revision locking (likes [[https://github.com/mattn/gom][gom]])
 
-* Other criticisms
+* Other critics
 
 - Too minimal
 - Already stable
@@ -184,7 +184,7 @@ Compile time error
 **
 **
 
-.caption Go seems thinked from a group of people who always has worked with C ignoring the last 30 years of evolution of programming languages
+.caption Go seems thinked from a group of people who always have worked with C ignoring the last 30 years of evolution of programming languages
 
 * Where GO rocks
 
@@ -195,7 +195,7 @@ Compile time error
 - compile speed
 - scaling (built-in concurrency primitives)
 - re-distribute apps (Docker, VM)
-- tools for manipulate the code
+- tools to manipulate the code
 
 * Learning curve - 1
 
@@ -314,7 +314,7 @@ Example of a web application
 
 * Tools
 
-Several tools for manipulate source code
+Several tools to manipulate source code
 
 - gofmt
 - go vet
