@@ -35,16 +35,18 @@ func main() {
 func Print(x interface{}) {
 
 	switch t := x.(type) {
-	case *animal.Animal:
-		fmt.Println(t.MyNameIs())
+
 	case *human.Human:
 		fmt.Println(t.MyNameIs())
 		fmt.Println(t.Speak())
+
 	case *animal.Parrot:
 		fmt.Println(t.MyNameIs())
 		fmt.Println(t.Speak())
+
 	default:
-		fmt.Println("not supported")
+		panic("not supported")
+
 	}
 
 }
