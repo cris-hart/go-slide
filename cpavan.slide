@@ -280,6 +280,19 @@ Documentation
 		
 	}
 
+* Learning curve - 5
+
+Tags
+
+	type S struct {
+		F string `species:"gopher" color:"blue"`
+	}
+	
+	type Person struct {
+	    FirstName    string    `json:"first_name"`
+	    LastName     string    `json:"last_name"`
+	    MiddleName   string    `json:"middle_name,omitempty"`
+	}
 
 * Concurrency
 
